@@ -8,7 +8,14 @@ export const store = configureStore({
   reducer: {
     contacts: contactsReducer,
     filters: filtersReducer,
-  }
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: ['persist/PERSIST'],
+        ignoredActionPaths: ['payload.register'],
+      },
+    }),
 });
 
 export const persistor = persistStore(store);
