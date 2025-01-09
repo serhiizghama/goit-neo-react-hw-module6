@@ -22,11 +22,12 @@ function ContactForm() {
     number: '',
   }
 
-  const phoneRegExp = /^([1-9]{3})(-[1-9]{2}){2}$/
+  const phoneRegExp = /^([1-9]{3})(-[1-9]{2}){2}$/;
   const FeedbackSchema = Yup.object().shape({
-    name: Yup.string().min(3, "Too Short!").max(50, "Too Long!").required("Required"),
-    number: Yup.string().matches(phoneRegExp, 'Phone number is not valid').required("Required")
+    name: Yup.string().min(3, "Имя должно содержать минимум 3 символа").max(50, "Имя не может превышать 50 символов").required("Имя обязательно"),
+    number: Yup.string().matches(phoneRegExp, 'Номер телефона должен быть в формате XXX-XX-XX, где X — цифры от 1 до 9').required("Номер телефона обязателен")
   });
+
 
 
   return (
