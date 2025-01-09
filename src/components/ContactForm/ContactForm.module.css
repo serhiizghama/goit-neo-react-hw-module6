@@ -1,0 +1,36 @@
+.newContact {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 10px;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.formItem {
+  width: 290px;
+}
+
+.formItem label,
+.formItem input {
+  width: 100%;
+}
+
+.formItem span {
+  display: block;
+  font-size: 14px;
+  color: red;
+}
+
+.button {
+  width: max-content;
+  margin: 0 auto;
+  border: 1px solid darkgray;
+  border-radius: 2px;
+}

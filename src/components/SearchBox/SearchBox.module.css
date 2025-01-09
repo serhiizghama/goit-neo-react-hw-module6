@@ -1,0 +1,16 @@
+.search {
+  margin-bottom: 20px;
+  width: 320px;
+}
+
+.searchBox,
+.searchBox:focus,
+.searchBox:hover {
+  border: 1px solid black;
+  border-radius: 2px;
+  outline: none;
+}
+
+.searchBox {
+  width: 100%;
+}
